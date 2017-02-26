@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EspTester</class>
+ <widget class="QDialog" name="EspTester">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2119</width>
+    <height>1442</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>30</y>
+     <width>748</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>设备列表</string>
+   </property>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>80</y>
+      <width>674</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>接口模块ID:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="itfid_edit"/>
+    <widget class="QPushButton" name="set_dev_list_btn">
+     <property name="text">
+      <string>设备列表</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>571</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>全局设置</string>
+   </property>
+   <widget class="QSplitter" name="splitter_4">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>51</y>
+      <width>477</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>监测模块ID:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="monitorid_edit"/>
+    </widget>
+    <widget class="QSplitter" name="splitter_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>串口：</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comsel_combox"/>
+     <widget class="QPushButton" name="com_open">
+      <property name="text">
+       <string>打开</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2"/>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>220</y>
+     <width>581</width>
+     <height>177</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>旧版查询</string>
+   </property>
+   <widget class="QSplitter" name="splitter_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>561</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QPushButton" name="bc_query_btn">
+     <property name="text">
+      <string>广播查询0</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="staquery0_btn">
+     <property name="text">
+      <string>状态查询0</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bwquery0_btn">
+     <property name="text">
+      <string>报文查询0</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>240</y>
+     <width>601</width>
+     <height>193</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>新版查询</string>
+   </property>
+   <widget class="QSplitter" name="splitter_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>561</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QSplitter" name="splitter_6">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>报文传输模块ID:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="bcmid_edit"/>
+    </widget>
+    <widget class="QSplitter" name="splitter_7">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>广播查询1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="staquery1_btn">
+      <property name="text">
+       <string>状态查询1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bwquery1_btn">
+      <property name="text">
+       <string>报文查询1</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>410</y>
+     <width>481</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>测试电压查询</string>
+   </property>
+   <widget class="QPushButton" name="voltagequery_btn">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>187</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>电压查询</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_6">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>730</y>
+     <width>1801</width>
+     <height>233</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>串口发送与接收</string>
+   </property>
+   <widget class="QSplitter" name="splitter_11">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>70</y>
+      <width>1711</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QSplitter" name="splitter_9">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>生成帧：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="sendedit"/>
+     <widget class="QPushButton" name="send_btn">
+      <property name="text">
+       <string>发送</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="splitter_10">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>接收  ：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recv_edit"/>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_7">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>450</y>
+     <width>1171</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>接口模块配置</string>
+   </property>
+   <widget class="QSplitter" name="splitter_15">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>1121</width>
+      <height>114</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QSplitter" name="splitter_12">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>接口ID:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="itfid_set_edit"/>
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>传输模块个数:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="bcmcnt_edit"/>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>配置ID和个数</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="splitter_14">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>报文传输模块ID:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="setbcmid_edit"/>
+     <widget class="QPushButton" name="setbcmid_btn">
+      <property name="text">
+       <string>配置BCM ID</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_8">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>560</y>
+     <width>541</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>信号切换</string>
+   </property>
+   <widget class="QSplitter" name="splitter_13">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>520</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QCheckBox" name="sig1_chkBox">
+     <property name="text">
+      <string>sig1</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="sig2_chkBox">
+     <property name="text">
+      <string>sig2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="sig3_chkBox">
+     <property name="text">
+      <string>sig3</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="text">
+      <string>生成</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>monitorid_edit</tabstop>
+  <tabstop>comsel_combox</tabstop>
+  <tabstop>com_open</tabstop>
+  <tabstop>itfid_edit</tabstop>
+  <tabstop>set_dev_list_btn</tabstop>
+  <tabstop>bc_query_btn</tabstop>
+  <tabstop>staquery0_btn</tabstop>
+  <tabstop>bwquery0_btn</tabstop>
+  <tabstop>bcmid_edit</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>staquery1_btn</tabstop>
+  <tabstop>bwquery1_btn</tabstop>
+  <tabstop>voltagequery_btn</tabstop>
+  <tabstop>sendedit</tabstop>
+  <tabstop>send_btn</tabstop>
+  <tabstop>recv_edit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comsel_combox</sender>
+   <signal>activated(int)</signal>
+   <receiver>EspTester</receiver>
+   <slot>onComSel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>790</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>staquery0_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>onSta0BtnClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>499</x>
+     <y>390</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>881</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>com_open</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>open()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>627</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1793</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>send_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>send()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1840</x>
+     <y>1210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1672</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>monitorid_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnMonitorIDChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>364</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>367</x>
+     <y>40</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>itfid_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnItfIDChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1296</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1350</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>set_dev_list_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnSetDevListBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1495</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1662</x>
+     <y>37</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bc_query_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnBcQueryBtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>412</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>219</x>
+     <y>526</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bwquery0_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnBWQuery0BtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>580</x>
+     <y>418</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>583</x>
+     <y>533</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bcmid_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnBcmIDChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1380</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1424</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnBcQuery1BtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>963</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1149</x>
+     <y>544</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>staquery1_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>onSta1Query1BtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1189</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1275</x>
+     <y>550</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bwquery1_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnBWQuery1BtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1380</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1522</x>
+     <y>530</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>voltagequery_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnVoltageQueryBtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>616</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>342</x>
+     <y>678</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>itfid_set_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnSetItfIDChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>990</x>
+     <y>612</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>785</x>
+     <y>616</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bcmcnt_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnBcmCntChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1665</x>
+     <y>622</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1660</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnIDCNTConfigBtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1890</x>
+     <y>625</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1997</x>
+     <y>625</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnGenSigBtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>560</x>
+     <y>836</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>563</x>
+     <y>923</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>setbcmid_edit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnSetBcmIDChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1462</x>
+     <y>700</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1478</x>
+     <y>871</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>setbcmid_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnSetBcmIDBtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1898</x>
+     <y>688</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1900</x>
+     <y>874</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>send()</slot>
+  <slot>onComSel()</slot>
+  <slot>onSta0BtnClicked()</slot>
+  <slot>onInEditChange()</slot>
+  <slot>OnMonitorIDChange()</slot>
+  <slot>OnItfIDChange()</slot>
+  <slot>OnSetDevListBtn()</slot>
+  <slot>OnBcQueryBtnDown()</slot>
+  <slot>OnBWQuery0BtnDown()</slot>
+  <slot>OnStaQuery0BtnDown()</slot>
+  <slot>OnBcmIDChange()</slot>
+  <slot>OnBcQuery1BtnDown()</slot>
+  <slot>onSta1Query1BtnDown()</slot>
+  <slot>OnBWQuery1BtnDown()</slot>
+  <slot>OnVoltageQueryBtnDown()</slot>
+  <slot>OnSetItfIDChange()</slot>
+  <slot>OnBcmCntChange()</slot>
+  <slot>OnIDCNTConfigBtnDown()</slot>
+  <slot>OnGenSigBtnDown()</slot>
+  <slot>OnSetBcmIDChange()</slot>
+  <slot>OnSetBcmIDBtnDown()</slot>
+ </slots>
+</ui>
