@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1024</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,91 +16,109 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>540</x>
      <y>20</y>
-     <width>314</width>
-     <height>63</height>
+     <width>470</width>
+     <height>120</height>
     </rect>
    </property>
    <property name="title">
     <string>设备列表</string>
    </property>
-   <widget class="QSplitter" name="splitter">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
-      <width>274</width>
-      <height>23</height>
+      <y>40</y>
+      <width>467</width>
+      <height>59</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <widget class="QLabel" name="label_6">
-     <property name="text">
-      <string>接口模块ID:</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="itfid_edit"/>
-    <widget class="QPushButton" name="set_dev_list_btn">
-     <property name="text">
-      <string>设备列表</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>接口模块ID:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="itfid_edit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="set_dev_list_btn">
+       <property name="text">
+        <string>设备列表</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
+   <zorder>splitter</zorder>
+   <zorder>groupBox_2</zorder>
   </widget>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>20</y>
-     <width>219</width>
-     <height>83</height>
+     <width>515</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="title">
     <string>全局设置</string>
    </property>
-   <widget class="QSplitter" name="splitter_4">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>41</y>
+      <width>461</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>监测模块ID:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="monitorid_edit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>199</width>
-      <height>43</height>
+      <y>90</y>
+      <width>467</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-    <widget class="QSplitter" name="splitter_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>监测模块ID:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="monitorid_edit"/>
-    </widget>
-    <widget class="QSplitter" name="splitter_3">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>串口：</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comsel_combox"/>
-     <widget class="QPushButton" name="com_open">
-      <property name="text">
-       <string>打开</string>
-      </property>
-     </widget>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>串口：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comsel_combox"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="com_open">
+       <property name="text">
+        <string>打开</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QWidget" name="layoutWidget">
@@ -128,108 +146,124 @@
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>120</y>
-     <width>245</width>
-     <height>63</height>
+     <x>10</x>
+     <y>182</y>
+     <width>491</width>
+     <height>101</height>
     </rect>
    </property>
    <property name="title">
     <string>旧版查询</string>
    </property>
-   <widget class="QSplitter" name="splitter_5">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>225</width>
-      <height>23</height>
+      <x>20</x>
+      <y>40</y>
+      <width>451</width>
+      <height>40</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <widget class="QPushButton" name="bc_query_btn">
-     <property name="text">
-      <string>广播查询0</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="staquery0_btn">
-     <property name="text">
-      <string>状态查询0</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bwquery0_btn">
-     <property name="text">
-      <string>报文查询0</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPushButton" name="bc_query_btn">
+       <property name="text">
+        <string>广播查询0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="staquery0_btn">
+       <property name="text">
+        <string>状态查询0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bwquery0_btn">
+       <property name="text">
+        <string>报文查询0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_4">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>110</y>
-     <width>265</width>
-     <height>83</height>
+     <x>510</x>
+     <y>180</y>
+     <width>500</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="title">
     <string>新版查询</string>
    </property>
-   <widget class="QSplitter" name="splitter_8">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>225</width>
-      <height>43</height>
+      <x>10</x>
+      <y>30</y>
+      <width>470</width>
+      <height>40</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>报文传输模块ID:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="bcmid_edit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>470</width>
+      <height>40</height>
+     </rect>
     </property>
-    <widget class="QSplitter" name="splitter_6">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>报文传输模块ID:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="bcmid_edit"/>
-    </widget>
-    <widget class="QSplitter" name="splitter_7">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>广播查询1</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="staquery1_btn">
-      <property name="text">
-       <string>状态查询1</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="bwquery1_btn">
-      <property name="text">
-       <string>报文查询1</string>
-      </property>
-     </widget>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>广播查询1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="staquery1_btn">
+       <property name="text">
+        <string>状态查询1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bwquery1_btn">
+       <property name="text">
+        <string>报文查询1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_5">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>200</y>
-     <width>142</width>
-     <height>56</height>
+     <x>10</x>
+     <y>300</y>
+     <width>212</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="title">
@@ -239,9 +273,9 @@
     <property name="geometry">
      <rect>
       <x>36</x>
-      <y>18</y>
-      <width>70</width>
-      <height>20</height>
+      <y>40</y>
+      <width>140</width>
+      <height>40</height>
      </rect>
     </property>
     <property name="text">
@@ -249,172 +283,215 @@
     </property>
    </widget>
   </widget>
-  <widget class="QGroupBox" name="groupBox_6">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>350</y>
-     <width>336</width>
-     <height>90</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>串口发送与接收</string>
-   </property>
-   <widget class="QSplitter" name="splitter_9">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>256</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>生成帧：</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="sendedit"/>
-    <widget class="QPushButton" name="send_btn">
-     <property name="text">
-      <string>发送</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QSplitter" name="splitter_10">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>50</y>
-      <width>221</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>接收  ：</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="recv_edit"/>
-   </widget>
-  </widget>
   <widget class="QGroupBox" name="groupBox_7">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>210</y>
-     <width>486</width>
-     <height>106</height>
+     <x>270</x>
+     <y>310</y>
+     <width>741</width>
+     <height>161</height>
     </rect>
    </property>
    <property name="title">
     <string>接口模块配置</string>
    </property>
-   <widget class="QSplitter" name="splitter_15">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>30</y>
-      <width>466</width>
-      <height>46</height>
+      <y>40</y>
+      <width>720</width>
+      <height>40</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>接口ID:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="itfid_set_edit"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>传输模块个数:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="bcmcnt_edit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>配置ID和个数</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>720</width>
+      <height>40</height>
+     </rect>
     </property>
-    <widget class="QSplitter" name="splitter_12">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label_7">
-      <property name="text">
-       <string>接口ID:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="itfid_set_edit"/>
-     <widget class="QLabel" name="label_8">
-      <property name="text">
-       <string>传输模块个数:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="bcmcnt_edit"/>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>配置ID和个数</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QSplitter" name="splitter_14">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label_9">
-      <property name="text">
-       <string>报文传输模块ID:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="setbcmid_edit"/>
-     <widget class="QPushButton" name="setbcmid_btn">
-      <property name="text">
-       <string>配置BCM ID</string>
-      </property>
-     </widget>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>报文传输模块ID:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="setbcmid_edit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="setbcmid_btn">
+       <property name="text">
+        <string>配置BCM ID</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_8">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>280</y>
-     <width>256</width>
-     <height>63</height>
+     <x>10</x>
+     <y>480</y>
+     <width>601</width>
+     <height>90</height>
     </rect>
    </property>
    <property name="title">
     <string>信号切换</string>
    </property>
-   <widget class="QSplitter" name="splitter_13">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
-      <width>216</width>
-      <height>23</height>
+      <y>40</y>
+      <width>567</width>
+      <height>59</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <widget class="QCheckBox" name="sig1_chkBox">
-     <property name="text">
-      <string>sig1</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="sig2_chkBox">
-     <property name="text">
-      <string>sig2</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="sig3_chkBox">
-     <property name="text">
-      <string>sig3</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="text">
-      <string>生成</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <widget class="QCheckBox" name="sig1_chkBox">
+       <property name="text">
+        <string>sig1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="sig2_chkBox">
+       <property name="text">
+        <string>sig2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="sig3_chkBox">
+       <property name="text">
+        <string>sig3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>生成</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
+  <widget class="QGroupBox" name="groupBox_6">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>580</y>
+     <width>971</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>串口发送与接收</string>
+   </property>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>651</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_10">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>生成帧：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="sendedit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="send_btn">
+       <property name="text">
+        <string>发送</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>90</y>
+      <width>920</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>接收  ：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="recv_edit"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <zorder>groupBox</zorder>
+  <zorder>groupBox_2</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>groupBox_3</zorder>
+  <zorder>groupBox_4</zorder>
+  <zorder>groupBox_5</zorder>
+  <zorder>groupBox_6</zorder>
+  <zorder>groupBox_7</zorder>
+  <zorder>groupBox_8</zorder>
+  <zorder>groupBox_6</zorder>
  </widget>
  <tabstops>
   <tabstop>monitorid_edit</tabstop>
@@ -425,7 +502,6 @@
   <tabstop>bc_query_btn</tabstop>
   <tabstop>staquery0_btn</tabstop>
   <tabstop>bwquery0_btn</tabstop>
-  <tabstop>bcmid_edit</tabstop>
   <tabstop>pushButton</tabstop>
   <tabstop>staquery1_btn</tabstop>
   <tabstop>bwquery1_btn</tabstop>
