@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2119</width>
-    <height>1442</height>
+    <width>2024</width>
+    <height>1434</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -252,54 +252,78 @@
   <widget class="QGroupBox" name="groupBox_6">
    <property name="geometry">
     <rect>
-     <x>-10</x>
+     <x>20</x>
      <y>730</y>
-     <width>1801</width>
-     <height>233</height>
+     <width>1961</width>
+     <height>691</height>
     </rect>
    </property>
    <property name="title">
     <string>串口发送与接收</string>
    </property>
-   <widget class="QSplitter" name="splitter_11">
+   <widget class="QSplitter" name="splitter_10">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>70</y>
-      <width>1711</width>
-      <height>93</height>
+      <y>320</y>
+      <width>120</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="orientation">
-     <enum>Qt::Vertical</enum>
+     <enum>Qt::Horizontal</enum>
     </property>
-    <widget class="QSplitter" name="splitter_9">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>接收  ：</string>
      </property>
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>生成帧：</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="sendedit"/>
-     <widget class="QPushButton" name="send_btn">
-      <property name="text">
-       <string>发送</string>
-      </property>
-     </widget>
     </widget>
-    <widget class="QSplitter" name="splitter_10">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>接收  ：</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="recv_edit"/>
-    </widget>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>140</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>生成帧：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="send_btn">
+    <property name="geometry">
+     <rect>
+      <x>1660</x>
+      <y>130</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>发送</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sendedit">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>100</y>
+      <width>1311</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="recv_edit">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>270</y>
+      <width>1311</width>
+      <height>81</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_7">
@@ -365,6 +389,45 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="ibbw_btn">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>180</y>
+      <width>187</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>配置报文</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ibw_btn">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>180</y>
+      <width>251</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>接口模块报文</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bbw_btn">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>180</y>
+      <width>187</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>应答器报文</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_8">
    <property name="geometry">
@@ -427,9 +490,7 @@
   <tabstop>staquery1_btn</tabstop>
   <tabstop>bwquery1_btn</tabstop>
   <tabstop>voltagequery_btn</tabstop>
-  <tabstop>sendedit</tabstop>
   <tabstop>send_btn</tabstop>
-  <tabstop>recv_edit</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -440,8 +501,8 @@
    <slot>onComSel()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>420</x>
-     <y>170</y>
+     <x>330</x>
+     <y>163</y>
     </hint>
     <hint type="destinationlabel">
      <x>790</x>
@@ -456,8 +517,8 @@
    <slot>onSta0BtnClicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>499</x>
-     <y>390</y>
+     <x>409</x>
+     <y>336</y>
     </hint>
     <hint type="destinationlabel">
      <x>881</x>
@@ -472,8 +533,8 @@
    <slot>open()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>627</x>
-     <y>185</y>
+     <x>537</x>
+     <y>163</y>
     </hint>
     <hint type="destinationlabel">
      <x>1793</x>
@@ -488,8 +549,8 @@
    <slot>send()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1840</x>
-     <y>1210</y>
+     <x>1740</x>
+     <y>842</y>
     </hint>
     <hint type="destinationlabel">
      <x>1672</x>
@@ -504,8 +565,8 @@
    <slot>OnMonitorIDChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>364</x>
-     <y>117</y>
+     <x>537</x>
+     <y>108</y>
     </hint>
     <hint type="destinationlabel">
      <x>367</x>
@@ -520,7 +581,7 @@
    <slot>OnItfIDChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1296</x>
+     <x>1126</x>
      <y>155</y>
     </hint>
     <hint type="destinationlabel">
@@ -536,7 +597,7 @@
    <slot>OnSetDevListBtn()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1495</x>
+     <x>1325</x>
      <y>149</y>
     </hint>
     <hint type="destinationlabel">
@@ -552,8 +613,8 @@
    <slot>OnBcQueryBtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>219</x>
-     <y>412</y>
+     <x>218</x>
+     <y>336</y>
     </hint>
     <hint type="destinationlabel">
      <x>219</x>
@@ -568,8 +629,8 @@
    <slot>OnBWQuery0BtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>580</x>
-     <y>418</y>
+     <x>600</x>
+     <y>336</y>
     </hint>
     <hint type="destinationlabel">
      <x>583</x>
@@ -584,8 +645,8 @@
    <slot>OnBcmIDChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1380</x>
-     <y>382</y>
+     <x>1220</x>
+     <y>327</y>
     </hint>
     <hint type="destinationlabel">
      <x>1424</x>
@@ -600,8 +661,8 @@
    <slot>OnBcQuery1BtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>963</x>
-     <y>462</y>
+     <x>838</x>
+     <y>382</y>
     </hint>
     <hint type="destinationlabel">
      <x>1149</x>
@@ -616,8 +677,8 @@
    <slot>onSta1Query1BtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1189</x>
-     <y>462</y>
+     <x>1029</x>
+     <y>382</y>
     </hint>
     <hint type="destinationlabel">
      <x>1275</x>
@@ -632,8 +693,8 @@
    <slot>OnBWQuery1BtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1380</x>
-     <y>462</y>
+     <x>1220</x>
+     <y>382</y>
     </hint>
     <hint type="destinationlabel">
      <x>1522</x>
@@ -664,8 +725,8 @@
    <slot>OnSetItfIDChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>990</x>
-     <y>612</y>
+     <x>1074</x>
+     <y>540</y>
     </hint>
     <hint type="destinationlabel">
      <x>785</x>
@@ -680,8 +741,8 @@
    <slot>OnBcmCntChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1665</x>
-     <y>622</y>
+     <x>1581</x>
+     <y>540</y>
     </hint>
     <hint type="destinationlabel">
      <x>1660</x>
@@ -696,8 +757,8 @@
    <slot>OnIDCNTConfigBtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1890</x>
-     <y>625</y>
+     <x>1790</x>
+     <y>540</y>
     </hint>
     <hint type="destinationlabel">
      <x>1997</x>
@@ -712,8 +773,8 @@
    <slot>OnGenSigBtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>560</x>
-     <y>836</y>
+     <x>539</x>
+     <y>676</y>
     </hint>
     <hint type="destinationlabel">
      <x>563</x>
@@ -728,8 +789,8 @@
    <slot>OnSetBcmIDChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1462</x>
-     <y>700</y>
+     <x>1495</x>
+     <y>603</y>
     </hint>
     <hint type="destinationlabel">
      <x>1478</x>
@@ -744,12 +805,60 @@
    <slot>OnSetBcmIDBtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1898</x>
-     <y>688</y>
+     <x>1790</x>
+     <y>603</y>
     </hint>
     <hint type="destinationlabel">
      <x>1900</x>
      <y>874</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ibbw_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnSetibBWBtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>817</x>
+     <y>668</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>620</x>
+     <y>687</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ibw_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnSetIBwBtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1146</x>
+     <y>661</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1129</x>
+     <y>728</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bbw_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnSetbBwBtnDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1388</x>
+     <y>659</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1376</x>
+     <y>724</y>
     </hint>
    </hints>
   </connection>
@@ -776,5 +885,8 @@
   <slot>OnGenSigBtnDown()</slot>
   <slot>OnSetBcmIDChange()</slot>
   <slot>OnSetBcmIDBtnDown()</slot>
+  <slot>OnSetibBWBtnDown()</slot>
+  <slot>OnSetIBwBtnDown()</slot>
+  <slot>OnSetbBwBtnDown()</slot>
  </slots>
 </ui>
