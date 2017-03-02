@@ -65,6 +65,7 @@ class EspDialog(QtGui.QDialog,espui.Ui_EspTester):
     def send(self):
         print("send")
         text = self.sendedit.text()
+        #toHtml("UTF-8");
         
         txt = text.replace(' ', '')
         print(txt)
