@@ -17,7 +17,8 @@ import threading
 import time
 import espitfconfig
 import espsigctrl
-    
+import defaultbw
+
 g_ser = serial.Serial(timeout = 1)
 
 
@@ -222,14 +223,9 @@ class EspDialog(QtGui.QDialog,espui.Ui_EspTester):
         bcm_cnt = int(tstr)
         return bcm_cnt
         
-    #生成配置报文传输模块个数和接口模块ID的帧
-    def OnIDCNTConfigBtnDown(self):
-        dlist = []
-        dlist.append(self.GetSetItfID())
-        dlist.append(self.GetBCMCnt()) 
-        alist = espitfconfig.GenFrame(dlist, 0x00)       
-        text = self.List2StrHex(alist)
-        self.sendedit.setText(text)
+   
+    
+    
         
     #生成信号配置帧
     def OnGenSigBtnDown(self):
@@ -262,6 +258,15 @@ class EspDialog(QtGui.QDialog,espui.Ui_EspTester):
         tstr = self.setbcmid_edit.text()
         setbcm_id = int(tstr)
         return setbcm_id
+    
+     #生成配置报文传输模块个数和接口模块ID的帧
+    def OnIDCNTConfigBtnDown(self):
+        dlist = []
+        dlist.append(self.GetSetItfID())
+        dlist.append(self.GetBCMCnt()) 
+        alist = espitfconfig.GenFrame(dlist, 0x00)       
+        text = self.List2StrHex(alist)
+        self.sendedit.setText(text)
         
     #生成配置报文传输模块ID的帧
     def OnSetBcmIDBtnDown(self):
@@ -270,6 +275,29 @@ class EspDialog(QtGui.QDialog,espui.Ui_EspTester):
         alist = espitfconfig.GenFrame(dlist, 0x02)
         text = self.List2StrHex(alist)
         self.sendedit.setText(text)
+    
+    #配置接口模块和应答器的报文
+    def OnSetibBWBtnDown(self):
+        dlist = defaultbw.RetDefaultBw()
+        alist = espitfconfig.GenFrame(dlist, 0x10)
+        text = self.List2StrHex(alist)
+        self.sendedit.setText(text)
+        
+    
+    #配置接口模块报文
+    def OnSetIBwBtnDown(self):
+        dlist = defaultbw.RetDefaultBw()
+        alist = espitfconfig.GenFrame(dlist, 0x12)
+        text = self.List2StrHex(alist)
+        self.sendedit.setText(text)
+    
+    #配置应答器报文
+    def OnSetbBwBtnDown(self):
+        dlist = defaultbw.RetDefaultBw()
+        alist = espitfconfig.GenFrame(dlist, 0x11)
+        text = self.List2StrHex(alist)
+        self.sendedit.setText(text)
+    
         
         
             
