@@ -6,6 +6,7 @@ Created on Sun Feb 19 17:26:47 2017
 """
 
 from PyQt4 import QtCore, QtGui
+
 import sys
 
 class Geometry(QtGui.QDialog):
@@ -55,34 +56,36 @@ class Geometry(QtGui.QDialog):
         self.updateLabel()
     
     def moveEvent(self, event):
-        self.updataLabel()
+        self.updateLabel()
         
     def resizeEvent(self, event):
-        self.updateLable()
+        self.updateLabel()
         
     def updateLabel(self):
-        temp = QtCore.QString() 
-        self.xLabel.setText(temp.setNum(self.x()))
-        self.yLabel.setText(temp.setNum(self.y()))
-        self.frameGeometryLabel.setText(temp.setNum(self.frameGeometry().x())
-        +","+temp.setNum(self.frameGeometry().y())+","
-        + temp.setNum(self.frameGeometry().width())+","
-        + temp.setNum(self.frameGeometry().height()))
+        self.xLabel.setText(str(self.x()))
+        self.yLabel.setText(str(self.y()))
+                
+        self.frameGeometryLabel.setText(str(self.frameGeometry().x())
+        +","+str(self.frameGeometry().y())+","
+        + str(self.frameGeometry().width())+","
+        + str(self.frameGeometry().height()))
         
-        self.posLabel.setText(temp.setNum(self.pos().x())+","
-        +temp.setNum(self.pos().y()))
+        self.posLabel.setText(str(self.pos().x())+","
+        +str(self.pos().y()))
         
-        self.geometryLabel.setText(temp.setNum(self.geometry().x())+","
-        +temp.setNum(self.geometry().y())+"," +
-        temp.setNum(self.geometry().width()+","+temp.setNum(self.geometry().hight())))
+        self.geometryLabel.setText(str(self.geometry().x())+","
+        +str(self.geometry().y())+"," +
+        str(self.geometry().width())+","+str(self.geometry().height()))
         
-        self.widthLabel.setText(temp.setNum(self.width()))
-        self.heightLabel.setText(temp.setNum(self.hight()))
-        self.rectLabel.setText(temp.setNum(self.rect().x())
-        +","+temp.setNum(self.rect().y())+","+temp.setNum(self.rect().width())+","
-        +temp.setNum(self.height()))
-        self.sizeLabel.setText(temp.setNum(self.size().width()+","+
-        temp.setNum(self.size().height)))
+        self.widthLabel.setText(str(self.width()))
+        self.heightLabel.setText(str(self.height()))
+        
+        self.rectLabel.setText(str(self.rect().x())
+        +","+str(self.rect().y())+","+str(self.rect().width())+","
+        +str(self.height()))
+        
+        self.sizeLabel.setText(str(self.size().width()) +","+
+        str(self.size().height()))
         
         
         
@@ -96,8 +99,6 @@ def main():
     app=QtGui.QApplication(sys.argv) 
     form = Geometry()
     form.show()
-    temp = QtCore.QString() 
-    
     sys.exit(app.exec_())
     
   
