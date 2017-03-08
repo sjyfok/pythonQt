@@ -10,49 +10,49 @@ import sys
 
 QtCore.QTextCodec.setCodecForTr(QtCore.QTextCodec.codecForName("utf8"))
 
-class MyQQ(QToolBox):
+class MyQQ(QtGui.QToolBox):
     def __init__(self, parent=None):
         super(MyQQ, self).__init__(parent)
         toolButton1_1=QtGui.QToolButton()
         toolButton1_1.setText(self.tr("朽木"))
-        toolButton1_1.setIcon(QIcon("image/9.gif"))
-        toolButton1_1.setIconSize(QSize(60,60))
+        toolButton1_1.setIcon(QtGui.QIcon("image/9.gif"))
+        toolButton1_1.setIconSize(QtCore.QSize(60,60))
         toolButton1_1.setAutoRaise(True)
         
         toolButton1_1.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         
-        toolButton1_2 = QToolButton()
+        toolButton1_2 = QtGui.QToolButton()
         toolButton1_2.setText(self.tr("Cindy"))
-        toolButton1_2.setIcon(QIcon("image/8.gif"))
-        toolButton1_2.setIconSize(QSize(60,60))
+        toolButton1_2.setIcon(QtGui.QIcon("image/8.gif"))
+        toolButton1_2.setIconSize(QtCore.QSize(60,60))
         toolButton1_2.setAutoRaise(True)
         toolButton1_2.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         
-        toolButton1_3 = QToolButton()
+        toolButton1_3 = QtGui.QToolButton()
         toolButton1_3.setText(self.tr("了了"))
-        toolButton1_3.setIcon(QIcon("image/1.gif"))
-        toolButton1_3.setIconSize(QSize(60,60))
+        toolButton1_3.setIcon(QtGui.QIcon("image/1.gif"))
+        toolButton1_3.setIconSize(QtCore.QSize(60,60))
         toolButton1_3.setAutoRaise(True)
         toolButton1_3.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
             
-        toolButton1_4 = QToolButton()
+        toolButton1_4 = QtGui.QToolButton()
         toolButton1_4.setText(self.tr("张三虎"))
-        toolButton1_4.setIcon(QIcon("image/3.gif"))
-        toolButton1_4.setIconSize(QSize(60,60))
+        toolButton1_4.setIcon(QtGui.QIcon("image/3.gif"))
+        toolButton1_4.setIconSize(QtCore.QSize(60,60))
         toolButton1_4.setAutoRaise(True)
         toolButton1_4.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
                                          
-        toolButton1_5 = QToolButton()
+        toolButton1_5 = QtGui.QToolButton()
         toolButton1_5.setText(self.tr("CSDN"))
-        toolButton1_5.setIcon(QIcon("image/4.gif"))
-        toolButton1_5.setIconSize(QSize(60,60))
+        toolButton1_5.setIcon(QtGui.QIcon("image/4.gif"))
+        toolButton1_5.setIconSize(QtCore.QSize(60,60))
         toolButton1_5.setAutoRaise(True)
         toolButton1_5.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
                                          
-        toolButton2_1 = QToolButton()
+        toolButton2_1 = QtGui.QToolButton()
         toolButton2_1.setText(self.tr("天的另一边"))
-        toolButton2_1.setIcon(QIcon("image/5.gif"))
-        toolButton2_1.setIconSize(QSize(60,60))
+        toolButton2_1.setIcon(QtGui.QIcon("image/5.gif"))
+        toolButton2_1.setIconSize(QtCore.QSize(60,60))
         toolButton2_1.setAutoRaise(True)
         toolButton2_1.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
                
@@ -97,10 +97,14 @@ class MyQQ(QToolBox):
         
         groupbox3=QtGui.QGroupBox()
         vlayout3=QtGui.QVBoxLayout(groupbox3)
-        vlayout2.setMargin(10)
-        vlayout2.setAlignment(QtCore.Qt.AlignCenter)
-        vlayout2.addWidget(toolButton2_1)
-        vlayout2.addWidget(toolButton2_2) 
+        vlayout3.setMargin(10)
+        vlayout3.setAlignment(QtCore.Qt.AlignCenter)
+        vlayout3.addWidget(toolButton3_1)
+        vlayout3.addWidget(toolButton3_2)
+        
+        self.addItem(groupbox1, self.tr("我的好友"))
+        self.addItem(groupbox2, self.tr("同事"))
+        self.addItem(groupbox3, self.tr("黑名单"))
         
         
         
