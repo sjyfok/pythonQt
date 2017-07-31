@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2024</width>
-    <height>1434</height>
+    <width>1754</width>
+    <height>1207</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -295,8 +295,8 @@
    <widget class="QPushButton" name="send_btn">
     <property name="geometry">
      <rect>
-      <x>1660</x>
-      <y>130</y>
+      <x>1540</x>
+      <y>120</y>
       <width>191</width>
       <height>51</height>
      </rect>
@@ -338,57 +338,6 @@
    <property name="title">
     <string>接口模块配置</string>
    </property>
-   <widget class="QSplitter" name="splitter_15">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>40</y>
-      <width>1121</width>
-      <height>114</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-    <widget class="QSplitter" name="splitter_12">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label_7">
-      <property name="text">
-       <string>接口ID:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="itfid_set_edit"/>
-     <widget class="QLabel" name="label_8">
-      <property name="text">
-       <string>传输模块个数:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="bcmcnt_edit"/>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>配置ID和个数</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QSplitter" name="splitter_14">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label_9">
-      <property name="text">
-       <string>报文传输模块ID:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="setbcmid_edit"/>
-     <widget class="QPushButton" name="setbcmid_btn">
-      <property name="text">
-       <string>配置BCM ID</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QPushButton" name="ibbw_btn">
     <property name="geometry">
      <rect>
@@ -426,6 +375,140 @@
     </property>
     <property name="text">
      <string>应答器报文</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>40</y>
+      <width>187</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>配置ID</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>110</y>
+      <width>187</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>查询接口ID</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>110</y>
+      <width>187</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>查询BCM个数</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>105</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>接口ID:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="itfid_set_edit">
+    <property name="geometry">
+     <rect>
+      <x>137</x>
+      <y>40</y>
+      <width>131</width>
+      <height>57</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>50</y>
+      <width>195</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>传输模块个数:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="bcmcnt_edit">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>40</y>
+      <width>151</width>
+      <height>57</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>40</y>
+      <width>187</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>配置BCM个数</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>225</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>报文传输模块ID:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="setbcmid_edit">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>110</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="setbcmid_btn">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>110</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>配置BCM ID</string>
     </property>
    </widget>
   </widget>
@@ -725,7 +808,7 @@
    <slot>OnSetItfIDChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1074</x>
+     <x>907</x>
      <y>540</y>
     </hint>
     <hint type="destinationlabel">
@@ -741,7 +824,7 @@
    <slot>OnBcmCntChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1581</x>
+     <x>1490</x>
      <y>540</y>
     </hint>
     <hint type="destinationlabel">
@@ -754,14 +837,14 @@
    <sender>pushButton_2</sender>
    <signal>clicked()</signal>
    <receiver>EspTester</receiver>
-   <slot>OnIDCNTConfigBtnDown()</slot>
+   <slot>OnBcmCNTConfigBtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1790</x>
+     <x>1726</x>
      <y>540</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1997</x>
+     <x>1895</x>
      <y>625</y>
     </hint>
    </hints>
@@ -789,8 +872,8 @@
    <slot>OnSetBcmIDChange()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1495</x>
-     <y>603</y>
+     <x>1020</x>
+     <y>610</y>
     </hint>
     <hint type="destinationlabel">
      <x>1478</x>
@@ -805,11 +888,11 @@
    <slot>OnSetBcmIDBtnDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1790</x>
-     <y>603</y>
+     <x>1230</x>
+     <y>610</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1900</x>
+     <x>1895</x>
      <y>874</y>
     </hint>
    </hints>
@@ -862,6 +945,54 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnItfIDConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>986</x>
+     <y>521</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>981</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnCheckItfID()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1447</x>
+     <y>597</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1550</x>
+     <y>727</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>EspTester</receiver>
+   <slot>OnCheckBcmCnt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1659</x>
+     <y>592</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1833</x>
+     <y>673</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>send()</slot>
@@ -881,12 +1012,15 @@
   <slot>OnVoltageQueryBtnDown()</slot>
   <slot>OnSetItfIDChange()</slot>
   <slot>OnBcmCntChange()</slot>
-  <slot>OnIDCNTConfigBtnDown()</slot>
+  <slot>OnBcmCNTConfigBtnDown()</slot>
   <slot>OnGenSigBtnDown()</slot>
   <slot>OnSetBcmIDChange()</slot>
   <slot>OnSetBcmIDBtnDown()</slot>
   <slot>OnSetibBWBtnDown()</slot>
   <slot>OnSetIBwBtnDown()</slot>
   <slot>OnSetbBwBtnDown()</slot>
+  <slot>OnItfIDConfig()</slot>
+  <slot>OnCheckItfID()</slot>
+  <slot>OnCheckBcmCnt()</slot>
  </slots>
 </ui>

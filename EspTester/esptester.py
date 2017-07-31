@@ -117,6 +117,10 @@ class EspDialog(QtGui.QDialog,espui.Ui_EspTester):
     #设置接口模块ID 回调函数
     def OnItfIDChange(self, text):
         self.itfid_edit.setText(text)
+        print(text)
+        
+
+    
     
     #生成设备列表帧并显示到 发送编辑框中
     def OnSetDevListBtn(self):
@@ -213,15 +217,19 @@ class EspDialog(QtGui.QDialog,espui.Ui_EspTester):
     #设置报文传输模块个数编辑框内容改变
     def OnBcmCntChange(self, text):
         self.bcmcnt_edit.setText(text)
+        
     #获得设定的接口模块ID
     def GetSetItfID(self):
         tstr = self.itfid_set_edit.text()
         setitf_id = int(tstr)
+        print(setitf_id)
         return setitf_id
+        
     #获得报文传输模块个数
     def GetBCMCnt(self):
         tstr = self.bcmcnt_edit.text()
         bcm_cnt = int(tstr)
+        print(bcm_cnt)
         return bcm_cnt
         
    
@@ -261,10 +269,17 @@ class EspDialog(QtGui.QDialog,espui.Ui_EspTester):
         return setbcm_id
     
      #生成配置报文传输模块个数和接口模块ID的帧
-    def OnIDCNTConfigBtnDown(self):
-        dlist = []
-        dlist.append(self.GetSetItfID())
+    def OnBcmCNTConfigBtnDown(self):
+        dlist = [0x00]
         dlist.append(self.GetBCMCnt()) 
+        alist = espitfconfig.GenFrame(dlist, 0x04)       
+        text = self.List2StrHex(alist)
+        self.sendedit.setText(text)
+        
+        #设置接口模块ID
+    def OnItfIDConfig(self):
+        dlist = [0x00]
+        dlist.append(self.GetSetItfID())
         alist = espitfconfig.GenFrame(dlist, 0x00)       
         text = self.List2StrHex(alist)
         self.sendedit.setText(text)
@@ -298,6 +313,20 @@ class EspDialog(QtGui.QDialog,espui.Ui_EspTester):
         alist = espitfconfig.GenFrame(dlist, 0x11)
         text = self.List2StrHex(alist)
         self.sendedit.setText(text)
+    
+    #查看接口模块ID
+    def OnCheckItfID(self):
+        alist = espitfconfig.GenFrame([], 0x01)
+        text = self.List2StrHex(alist)
+        self.sendedit.setText(text)
+    
+    
+    #查看报文传输模块数量
+    def OnCheckBcmCnt(self):
+        alist = espitfconfig.GenFrame([], 0x05)
+        text = self.List2StrHex(alist)
+        self.sendedit.setText(text)
+    
     
         
         

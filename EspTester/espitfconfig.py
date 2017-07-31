@@ -23,8 +23,6 @@ def GenFrame(s_list, cmd):
     #alist.append(cmd)   
     if len(s_list) != 0:
         for item in s_list:
-            if cmd == 0x00:
-                alist.append(0x00)
             alist.append(item)
     length = len(alist)-2
     alist[2] = (length>>8)
