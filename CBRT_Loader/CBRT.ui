@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CBRTLoader</class>
+ <widget class="QDialog" name="CBRTLoader">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1496</width>
+    <height>1182</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>10</y>
+     <width>431</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>字库更新</string>
+   </property>
+   <widget class="QSplitter" name="splitter_2">
+    <property name="geometry">
+     <rect>
+      <x>32</x>
+      <y>52</y>
+      <width>374</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="text">
+      <string>更新字库</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="set_dev_list_btn">
+     <property name="text">
+      <string>打开字库</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>491</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>全局设置</string>
+   </property>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>42</y>
+      <width>435</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>串口：</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comsel_combox"/>
+    <widget class="QPushButton" name="com_open">
+     <property name="text">
+      <string>打开</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2"/>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>170</y>
+     <width>431</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>位图更新</string>
+   </property>
+   <widget class="QSplitter" name="splitter_3">
+    <property name="geometry">
+     <rect>
+      <x>32</x>
+      <y>52</y>
+      <width>374</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="text">
+      <string>更新位图</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="set_dev_list_btn_2">
+     <property name="text">
+      <string>打开位图</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>330</y>
+     <width>431</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>程序更新</string>
+   </property>
+   <widget class="QSplitter" name="splitter_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>374</width>
+      <height>57</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="text">
+      <string>更新程序</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="set_dev_list_btn_3">
+     <property name="text">
+      <string>打开程序</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>com_open</sender>
+   <signal>clicked()</signal>
+   <receiver>CBRTLoader</receiver>
+   <slot>open()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>466</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1116</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comsel_combox</sender>
+   <signal>activated(int)</signal>
+   <receiver>CBRTLoader</receiver>
+   <slot>onComSel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>291</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>790</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>CBRTLoader</receiver>
+   <slot>onUpdateFont()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>686</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>887</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>set_dev_list_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>CBRTLoader</receiver>
+   <slot>onOpenFontLib()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>855</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>CBRTLoader</receiver>
+   <slot>onUpdateBmp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>646</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>644</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>set_dev_list_btn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>CBRTLoader</receiver>
+   <slot>onOpenBmp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>847</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>847</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>CBRTLoader</receiver>
+   <slot>onUpdatePrg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>691</x>
+     <y>419</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>689</x>
+     <y>485</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>set_dev_list_btn_3</sender>
+   <signal>clicked()</signal>
+   <receiver>CBRTLoader</receiver>
+   <slot>onOpenPrg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>918</x>
+     <y>410</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>917</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>send()</slot>
+  <slot>onComSel()</slot>
+  <slot>onUpdateFont()</slot>
+  <slot>onOpenFontLib()</slot>
+  <slot>onUpdateBmp()</slot>
+  <slot>onOpenBmp()</slot>
+  <slot>onUpdatePrg()</slot>
+  <slot>onOpenPrg()</slot>
+ </slots>
+</ui>
