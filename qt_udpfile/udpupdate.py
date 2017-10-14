@@ -67,10 +67,15 @@ class updateDlg(QtGui.QDialog, ui_udpfile.Ui_UdpFile):
                 QtGui.QMessageBox.information(self, "Error",
                                       self.tr("文件为空!"))
                 return 
+            
+            while True:
+                data, addr = s.recvfrom(100)
+                print(data)
+                print(addr)  
+                print(data[6])
+                if data[6] == 0x03:
+                    break
                 
-            data, addr = s.recvfrom(100)
-            print(data)
-            print(addr)  
             
             self.bar_sendprogress.setMinimum(0)
             self.bar_sendprogress.setMaximum(file_len)  
@@ -90,10 +95,15 @@ class updateDlg(QtGui.QDialog, ui_udpfile.Ui_UdpFile):
                     s.sendto(head, d_addr)
                     s.sendto(bytestr, d_addr)
                     s.sendto(end, d_addr)
-                    data, addr = s.recvfrom(100)    
-                    print(data)
-                    print(addr)
-                    size += length
+                    while True:
+                        data, addr = s.recvfrom(100) 
+                        print(data)
+                        print(addr)
+                        if (data[6] == 0x04) | (data[6] == 0x05):
+                            size += length
+                            break;
+                   
+                    
                     print(size)
                     self.bar_sendprogress.setValue(size)
                     QtCore.QThread.msleep(100)
